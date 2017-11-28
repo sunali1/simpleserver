@@ -15,7 +15,7 @@ const mimeTypes = {
 
 http.createServer(function(req, res){
   var uri = url.parse(req.url).pathname;
-  var fileName = path.join(process.cwd(), unescvape(uri));
+  var fileName = path.join(process.cwd(), unescape(uri));
   console.log('Loading' + uri);
   var stats;
 
